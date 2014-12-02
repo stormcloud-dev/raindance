@@ -13,10 +13,10 @@ Clone this repository with ```git``` first of all - the clone URL should be on t
 ### Setting up your environment
 
 RainDance is written using [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - so you'll need JDK 8 to work on it.
-We recommend using [IntelliJ IDEA](https://www.jetbrains.com/idea/) to work on StormCloud (though of course Eclipse or NetBeans should work too)
-Using IntelliJ IDEA, import the project from Maven and allow it to synchronize with the ```pom.xml``` automatically.
-Create a Run Configuration, set the main class to ```StormCloud```, the classpath to your ```stormcloud``` module, and the rest should be set by default. You should now be set to run the server from within IntelliJ.
-If you want to make IntelliJ build with Maven instead of the default compiler, you can switch the Make task for a Maven goal with the command line directive ```clean install```
+We recommend using [IntelliJ IDEA](https://www.jetbrains.com/idea/) to work on RainDance (though of course Eclipse or NetBeans should work too)
+Using IntelliJ IDEA, import the project from Gradle and synchronize with the ```build.gradle```
+Create a Run Configuration, set the main class to ```RainDance```, the classpath to your ```raindance``` module, and the rest should be set by default. You should now be set to run the application from within IntelliJ.
+If you want to make IntelliJ build with Gradle instead of the default compiler, you can switch the Make task for a Gradle goal with the command line directive ```shadowJar```
 
 Building
 --------
@@ -27,7 +27,7 @@ To build the StormCloud jar, use ```gradle shadowJar``` - this will create ```ra
 Running
 -------
 
-As with any other command-line Java application, run StormCloud with:
+As with any other command-line Java application, run RainDance with:
 
 ```
 java -Xms512M -Xmx1024M -jar raindance-x.x-all.jar
